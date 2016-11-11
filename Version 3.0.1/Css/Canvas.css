@@ -1,0 +1,16 @@
+#game {
+    border: 1px solid black;
+    width: 300;
+    height: 300;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    /*background: linear-gradient(to bottom right, #CCCCCC, #FFFFFF);*/
+    /*background: linear-gradient(to bottom right, #D1FFD1, #FFFFFF);*/
+    background: linear-gradient(to bottom right, #CCFFCC, #FFFFFF);
+    /*background: linear-gradient(to bottom right, #B2D1F0, #FFFFFF);*/
+    /*background: linear-gradient(to bottom right, #CCCCFF, #FFFFFF);*/
+}
