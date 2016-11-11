@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NewVi</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Game Library -->
+        <script src="Game Library/UILibrary.js"></script>
+        <script src="Game Library/LogicLibrary.js"></script>
+        <script src="Game Library/SoundLibrary.js"></script>
+        <script src="Game Library/DatabaseLibrary.js"></script>
+        <!-- Game Panel -->
+        <script src="JavaScript/StartPanel.js"></script>
+        <script src="JavaScript/KeyboardPanel.js"></script>
+        <script src="JavaScript/LeaderboardPanel.js"></script>
+        <script src="JavaScript/LevelPanel.js"></script>
+        <script src="JavaScript/ObservationPanel.js"></script>
+        <script src="JavaScript/QuestionPanel.js"></script>
+        <script src="JavaScript/AnswerPanel.js"></script>
+        <script src="JavaScript/EndPanel.js"></script>
+        <script src="JavaScript/Achievement.js"></script>
+        <!-- Game -->
+        <script src="JavaScript/Main.js"></script>
+        <!-- Database -->
+        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Website Styling -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<!-- Css -->
+		<link rel="stylesheet" type="text/css" href="Css/Web.css"/>
+        <link rel="stylesheet" type="text/css" href="Css/Canvas.css"/>
+	</head>
+
+	<body onload = "runGame();">
+        <!-- Audio -->
+		<audio id="background_audio">
+			<source src = "Sound/Retrosoul.mp3" type"audio">
+		</audio>
+		<audio id="fail">
+			<source src = "Sound/Fail.mp3" type"audio">
+		</audio>
+		<audio id="success">
+			<source src = "Sound/Success.mp3" type"audio">
+		</audio>
+
+		<!--nav bar-->
+		<div class = "navbar navbar-default navbar-static-top">
+			<div class = "navbar-header">
+				<button type = "button" class = "navbar-toggle" data-toggle = "collapse" data-target = "#myNavbar">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class="navbar-brand">
+					<div class = "row">
+						<div class = "col-xs-3">
+							<!--img src = "Images/Display/logo.png" alt = "logo" class = "navbarLogo"-->
+						</div>
+						<div class = "col-xs-9">
+							<p>NewVi</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "collapse navbar-collapse" id = "myNavbar">
+				<ul class = "nav navbar-nav pull-right">
+					<li class = "active"><a href = "Index.html">HOME</a>
+				</ul>
+			</div>
+		</div>
+
+		<!--jumbotron-->
+		<div class = "jumbotron">
+			<div class = "container">
+				<div class = "row">
+					<div class = "col-sm-1	">
+					</div>
+					<div class = "col-sm-3" style="text-align: center">
+						<!--img src="Images/Display/logo.png" alt="Logo" class = "logo"/-->
+					</div>
+					<div class = "col-sm-7">
+						<h1><span style = "color: orange">New</span>Vi</h1>
+						<p>Developing the <span style = "color: orange">Finest</span> Brain Cells</p>
+					</div>
+					<div class = "col-sm-1">
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <!-- Canvas -->
+		<div class = "gameframe">
+            <div class = "row">
+                <br>
+            </div>
+            <div class = "row">
+                <br>
+            </div>
+            <div class = "row">
+                <br>
+            </div>
+            <div class = "row">
+                <div class = "col-xs-12">
+                    <canvas id="game" width="300" height="300"></canvas>
+                </div>
+            </div>
+            <div class = "row">
+                <br>
+            </div>
+            <div class = "row">
+                <br>
+            </div>
+            <div class = "row">
+                <br>
+            </div>
+		</div>
+
+		<!--Footer-->
+		<div class="navbar navbar-default navbar-static-bottom">
+			<div class = "container">
+                <div class = "row">
+                    <div class = "col-lg-3 col-sm-6">
+						<span class="glyphicon glyphicon-map-marker"><b> Visit</b></span>
+						<p>3700 Willingdon Ave, Burnaby, BC V5G 3H2</p>
+					</div>
+					<div class = "col-lg-3 col-sm-6">
+						<span class="glyphicon glyphicon-earphone"><b> Call</b></span>
+						<p>T: (604) 434-5734 </p>
+					</div>
+					<div class = "col-lg-3 col-sm-6">
+						<span class="glyphicon glyphicon-envelope"><b> Contact</b></span>
+						<p>www.facebook.com/pages/CacheMoney</p>
+					</div>
+					<div class = "col-lg-3 col-sm-6">
+						<span class="glyphicon glyphicon-copyright-mark"><b> CacheMoney</b></span>
+						<p>2015 by CacheMoney. All Rights Reserved.<br>
+						Last Updated: April 2015</p>
+					</div>
+				</div>
+				<div class = "row">
+					<div class = "col-xs-12 col-sm-4">
+						<p class = "techSupport">HsuanWei Fu - hsuanweifu@gmail.com</p>
+                    </div>
+                    <div class = "col-xs-12 col-sm-4">
+						<p class = "techSupport">Matthew Wong - matthewwong3.14@gmail.com</p>
+                    </div>
+                    <div class = "col-xs-12 col-sm-4">
+						<p class = "techSupport">Jackee Ma - jackee.huy.ma@gmail.com</p>
+                    </div>
+                    <div class = "col-xs-12 col-sm-6">
+						<p class = "techSupport">Michael Luo - a782347791@hotmail.com</p>
+                    </div>
+                    <div class = "col-xs-12 col-sm-6">
+                        <p class = "techSupport">Aaron Pua - aaronpua@hotmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

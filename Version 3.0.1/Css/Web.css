@@ -1,0 +1,44 @@
+.body {
+    text-align: center;
+}
+.content {
+	text-align: center;
+}
+.glyphicon {
+	font-size: 20px;
+}
+.techSupport {
+	text-align: center;
+	font-size: 9pt;
+}
+.navbarLogo {
+	height: 25px;
+	width: auto;
+}
+.jumbotron {
+	padding: 0.5em 0.5em;
+	h1 {
+		font-size: 2em;
+	}
+	p {
+		font-size: 1.2em;
+		.btn {
+			padding: 0.5em;
+		}
+	}
+}
+.logo{
+	height: 150px;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+#map-canvas {
+	height: 300px;
+	width: 100%;
+	position: relative;
+}
+#homeText{
+	margin-left: 20%;
+	margin-right: 20%;
+}
